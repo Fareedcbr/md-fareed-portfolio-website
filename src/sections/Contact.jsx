@@ -35,7 +35,7 @@ function Contact() {
   };
 
   return (
-    <section className="px-6 md:px-20 py-24">
+    <section id="contact" className="px-6 md:px-20 py-24">
 
       <motion.div
         initial={{ opacity: 0, y: 60 }}

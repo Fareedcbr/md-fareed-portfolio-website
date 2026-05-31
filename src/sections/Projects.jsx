@@ -28,7 +28,7 @@ const projects = [
 
 function Projects() {
   return (
-    <section className="px-6 md:px-20 py-24">
+    <section id="projects" className="px-6 md:px-20 py-24">
 
       {/* TITLE */}
       <motion.div
