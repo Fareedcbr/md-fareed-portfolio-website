@@ -103,12 +103,6 @@ function Contact() {
         </form>
 
       </motion.div>
-
-      {/* FOOTER */}
-      <footer className="text-center text-gray-500 mt-16">
-        © 2026 Md Fareed. All rights reserved.
-      </footer>
-
     </section>
   );
 }

@@ -1,4 +1,5 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
+import Footer from "./components/Footer";
 
 import Navbar from "./components/Navbar";
 
@@ -27,6 +28,8 @@ function App() {
           <Route path="/experience" element={<ExperiencePage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
+        
+        <Footer />
       </div>
     </HashRouter>
   );
