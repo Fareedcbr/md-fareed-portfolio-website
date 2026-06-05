@@ -1,15 +1,20 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 import {
   FaHome,
   FaUser,
   FaCode,
   FaProjectDiagram,
   FaEnvelope,
+  FaBriefcase,
 } from "react-icons/fa";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <motion.nav
@@ -31,8 +36,8 @@ function Navbar() {
           "
         >
           {/* Logo */}
-          <a
-            href="#home"
+          <Link
+            to="/"
             className="
               text-xl md:text-2xl
               font-bold
@@ -43,68 +48,63 @@ function Navbar() {
               text-transparent
             "
           >
-            Md Fareed
-          </a>
+            Md Fareeduddin
+          </Link>
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex items-center gap-8 text-gray-300 font-medium">
             <li>
-              <a
-                href="#home"
+              <Link
+                to="/"
                 className="group relative flex items-center gap-2 hover:text-purple-400 transition duration-300"
               >
                 <FaHome />
                 Home
-                <span className="absolute -bottom-2 left-0 h-[2px] w-0 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
-                href="#about"
+              <Link
+                to="/about"
                 className="group relative flex items-center gap-2 hover:text-purple-400 transition duration-300"
               >
                 <FaUser />
                 About
-                <span className="absolute -bottom-2 left-0 h-[2px] w-0 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
-                href="#skills"
-                className="group relative flex items-center gap-2 hover:text-purple-400 transition duration-300"
-              >
-                <FaCode />
-                Skills
-                <span className="absolute -bottom-2 left-0 h-[2px] w-0 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="#projects"
+              <Link
+                to="/projects"
                 className="group relative flex items-center gap-2 hover:text-purple-400 transition duration-300"
               >
                 <FaProjectDiagram />
                 Projects
-                <span className="absolute -bottom-2 left-0 h-[2px] w-0 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
-                href="#contact"
+              <Link
+                to="/experience"
+                className="group relative flex items-center gap-2 hover:text-purple-400 transition duration-300"
+              >
+                <FaBriefcase />
+                Experience
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/contact"
                 className="group relative flex items-center gap-2 hover:text-purple-400 transition duration-300"
               >
                 <FaEnvelope />
                 Contact
-                <span className="absolute -bottom-2 left-0 h-[2px] w-0 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
-              </a>
+              </Link>
             </li>
           </ul>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Button */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden text-2xl text-white"
@@ -127,62 +127,60 @@ function Navbar() {
             "
           >
             <ul className="flex flex-col items-center gap-6 py-8 text-gray-300">
-
               <li>
-                <a
-                  href="#home"
-                  onClick={() => setMenuOpen(false)}
+                <Link
+                  to="/"
+                  onClick={closeMenu}
                   className="flex items-center gap-2 hover:text-purple-400"
                 >
                   <FaHome />
                   Home
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a
-                  href="#about"
-                  onClick={() => setMenuOpen(false)}
+                <Link
+                  to="/about"
+                  onClick={closeMenu}
                   className="flex items-center gap-2 hover:text-purple-400"
                 >
                   <FaUser />
                   About
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a
-                  href="#skills"
-                  onClick={() => setMenuOpen(false)}
-                  className="flex items-center gap-2 hover:text-purple-400"
-                >
-                  <FaCode />
-                  Skills
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#projects"
-                  onClick={() => setMenuOpen(false)}
+                <Link
+                  to="/projects"
+                  onClick={closeMenu}
                   className="flex items-center gap-2 hover:text-purple-400"
                 >
                   <FaProjectDiagram />
                   Projects
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a
-                  href="#contact"
-                  onClick={() => setMenuOpen(false)}
+                <Link
+                  to="/experience"
+                  onClick={closeMenu}
+                  className="flex items-center gap-2 hover:text-purple-400"
+                >
+                  <FaBriefcase />
+                  Experience
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/contact"
+                  onClick={closeMenu}
                   className="flex items-center gap-2 hover:text-purple-400"
                 >
                   <FaEnvelope />
                   Contact
-                </a>
+                </Link>
               </li>
-
             </ul>
           </div>
         )}
