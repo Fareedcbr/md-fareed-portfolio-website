@@ -3,13 +3,28 @@ const experience = [
     company: "MERN Stack Internship",
     duration: "2025",
     description:
-      "Worked on modern web applications using MongoDB, Express, React and Node.js.",
+      "Built modern web applications using MongoDB, Express.js, React, and Node.js. Worked on frontend components, REST APIs, and full-stack development concepts.",
   },
+
   {
-    company: "Deep Learning Internship",
+    company: "Online Assignment Management System",
     duration: "2025",
     description:
-      "Built gesture recognition systems using machine learning techniques.",
+      "Developed a full-stack assignment submission and management platform using Flask, Python, and MySQL with authentication and database integration.",
+  },
+
+  {
+    company: "Gesture Recognition Project",
+    duration: "2025",
+    description:
+      "Created a gesture recognition system using Python, OpenCV, and deep learning techniques for real-time hand gesture detection.",
+  },
+
+  {
+    company: "B.Sc Computer Science",
+    duration: "2022 - 2025",
+    description:
+      "Graduated from Central University of Karnataka with coursework in Programming, Databases, Computer Networks, Algorithms, and Software Engineering.",
   },
 ];
 
