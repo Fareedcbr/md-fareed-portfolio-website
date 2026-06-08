@@ -1,16 +1,14 @@
 import Hero from "../sections/Hero";
-import About from "../sections/About";
-import Skills from "../sections/Skills";
-import Projects from "../sections/Projects";
+import FeaturedProjects from "../sections/FeaturedProjects";
+import FeaturedCertifications from "../sections/FeaturedCertifications";
 import CTA from "../sections/CTA";
 
 function Home() {
   return (
     <>
       <Hero />
-      <About />
-      <Skills />
-      <Projects />
+      <FeaturedProjects />
+      <FeaturedCertifications />
       <CTA />
     </>
   );

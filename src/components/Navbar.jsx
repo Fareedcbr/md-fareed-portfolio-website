@@ -9,7 +9,9 @@ import {
   FaProjectDiagram,
   FaEnvelope,
   FaBriefcase,
+  FaAward,
 } from "react-icons/fa";
+
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -95,6 +97,16 @@ function Navbar() {
 
             <li>
               <Link
+                to="/certifications"
+                className="group relative flex items-center gap-2 hover:text-purple-400 transition duration-300"
+              >
+                <FaAward />
+                Certifications
+              </Link>
+            </li>
+
+            <li>
+              <Link
                 to="/contact"
                 className="group relative flex items-center gap-2 hover:text-purple-400 transition duration-300"
               >
@@ -168,6 +180,17 @@ function Navbar() {
                 >
                   <FaBriefcase />
                   Experience
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/certifications"
+                  className="group relative flex items-center gap-2 hover:text-purple-400 transition duration-300"
+                >
+                  🏆
+                  Certifications
+                  <span className="absolute -bottom-2 left-0 h-[2px] w-0 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </li>
 

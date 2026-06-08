@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import {
@@ -75,11 +76,11 @@ function Hero() {
             sequence={[
               "Full Stack Developer",
               2000,
+              "Java Spring Boot Developer",
+              2000,
               "MERN Stack Developer",
               2000,
-              "Java Backend Developer",
-              2000,
-              "React Developer",
+              "Backend Developer",
               2000,
             ]}
             wrapper="span"
@@ -96,10 +97,46 @@ function Hero() {
           transition={{ delay: 1 }}
           className="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto mt-8 leading-relaxed"
         >
-          Full Stack Developer passionate about building modern,
-          responsive, and scalable web applications using React,
-          MERN Stack, Java, Spring Boot, and MySQL.
+          B.Sc Computer Science Graduate from Central University of Karnataka.
+          Passionate about building scalable web applications using
+          React, MERN Stack, Java Spring Boot, Flask and MySQL.
+          Currently seeking Full Stack, Frontend, Backend and Software
+          Developer opportunities.
         </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.1 }}
+          className="grid grid-cols-3 gap-6 max-w-2xl mx-auto mt-10"
+        >
+          <div className="text-center">
+            <h3 className="text-3xl font-bold text-purple-400">
+              10+
+            </h3>
+            <p className="text-gray-400 text-sm mt-2">
+              Projects Built
+            </p>
+          </div>
+
+          <div className="text-center">
+            <h3 className="text-3xl font-bold text-purple-400">
+              2025
+            </h3>
+            <p className="text-gray-400 text-sm mt-2">
+              Graduate
+           </p>
+          </div>
+        
+          <div className="text-center">
+            <h3 className="text-3xl font-bold text-purple-400">
+              MERN
+            </h3>
+            <p className="text-gray-400 text-sm mt-2">
+              Full Stack
+            </p>
+          </div>
+        </motion.div>
 
         {/* Buttons */}
         <motion.div
@@ -108,12 +145,12 @@ function Hero() {
           transition={{ delay: 1.2 }}
           className="flex flex-wrap justify-center gap-4 mt-12"
         >
-          <a
-            href="#projects"
+          <Link
+            to="/projects"
             className="bg-gradient-to-r from-purple-600 to-pink-500 px-8 py-4 rounded-xl font-semibold hover:scale-105 transition duration-300"
           >
             View Projects
-          </a>
+          </Link>
 
           <a
             href={`${import.meta.env.BASE_URL}resume.pdf`}
@@ -157,6 +194,14 @@ function Hero() {
           >
             <FaEnvelope />
           </a>
+        </motion.div>
+
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ repeat: Infinity, duration: 1.5 }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-500"
+        >
+          ↓
         </motion.div>
 
       </div>

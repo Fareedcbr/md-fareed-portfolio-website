@@ -9,9 +9,9 @@ const projects = [
 
     tech: ["Flask", "Python", "MySQL"],
 
-    github: "https://github.com/Fareedcbr",
+    github: "https://github.com/Fareedcbr/mini-project",
 
-    demo: "#",
+    // demo: "#",
   },
 
   {
@@ -21,7 +21,7 @@ const projects = [
 
     tech: ["React", "Tailwind", "Framer Motion"],
 
-    github: "https://github.com/Fareedcbr",
+    github: "https://github.com/Fareedcbr/md-fareed-portfolio-website",
 
     demo: "https://fareedcbr.github.io/md-fareed-portfolio-website/",
   },
@@ -33,9 +33,9 @@ const projects = [
 
     tech: ["Python", "OpenCV", "Deep Learning"],
 
-    github: "https://github.com/Fareedcbr",
+    github: "https://github.com/Fareedcbr/Deep-learning-internship",
 
-    demo: "#",
+    // demo: "#",
   },
 ];
 
